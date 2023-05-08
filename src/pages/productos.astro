@@ -1,0 +1,116 @@
+---
+import Layout from "../layouts/Layout.astro";
+import herraje from "../images/productos/herrajes.png";
+import cables from "../images/productos/cables.png";
+import varilla from "../images/productos/varillas.png";
+import tablero from "../images/productos/tableros.png";
+import armario from "../images/productos/armarios.png";
+---
+
+<Layout title="Productos">
+  <main>
+    <div class="section">
+      <div class="container">
+        <h1 class="title-text">Materiales Eléctricos</h1>
+        <div class="columns is-flex is-justify-content-center">
+          <div class="column is-one-quarter">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src={herraje} />
+                </figure>
+              </div>
+              <div class="card-content is-one-fo">
+                <div class="content">
+                  <h2>Herrajes</h2>
+                  Bajo las normas de la EEQ
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column is-one-quarter">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src={cables} />
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="content">
+                  <h2>Conductores Eléctricos</h2>
+                  De bajo y medio voltaje
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column is-one-quarter">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src={varilla} />
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="content">
+                  <h2>Varillas Coperweld</h2>
+                  De baja y alta camada, sueldas exotérmicas y mejoramiento
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="container">
+          <h1 class="title-text">Tableros</h1>
+          <div class="columns is-flex is-justify-content-center">
+            <div class="column is-one-quarter">
+              <div class="card">
+                <div class="card-image">
+                  <figure class="image is-4by3">
+                    <img src={armario} />
+                  </figure>
+                </div>
+                <div class="card-content is-one-fo">
+                  <div class="content">
+                    <h2>Tableros Armarios de Medidores</h2>
+                    Aprobados por la EEQ
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="column is-one-quarter">
+              <div class="card">
+                <div class="card-image">
+                  <figure class="image is-4by3">
+                    <img src={tablero} />
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <div class="content">
+                    <h2>Tableros de Distribución Principal</h2>
+                    Aprobados por la EEQ
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <style>
+    .content h2 {
+      font-size: 1.5em;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    .card {
+      height: 100%;
+    }
+  </style>
+</Layout>

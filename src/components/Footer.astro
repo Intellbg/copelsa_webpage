@@ -1,0 +1,53 @@
+---
+import IconText from "../components/IconText.astro";
+---
+
+<style>
+    h1.title-text {
+        font-size: 1.5rem;
+        color: white;
+    }
+    h2 {
+        font-size: 1.15rem !important;
+    }
+    .gapped {
+        gap: 1em;
+    }
+    .end {
+        background-color: #304b36;
+        color: #fff;
+        position: relative;
+        bottom: 0px;
+    }
+    p {
+        margin: 0 !important;
+    }
+    footer {
+        padding: 2rem !important;
+        color: white;
+        background-color: #395d41 !important;
+    }
+</style>
+<footer class="footer">
+    <div class="container">
+        <div class="columns">
+            <div class="column ">
+                <h1 class="title-text white">COPELSA</h1>
+                <h2 class="white">Ingeniería Eléctrica y Mecánica</h2>
+            </div>
+            <div
+            class="column is-flex is-flex-direction-column is-justify-content-center gapped"
+            >
+            <h1 class="title-text white">Información</h1>
+            <IconText icon="apartment" title="Julio Moreno y Rosario del Alcazar, Quito 170801" />
+            <IconText icon="email" title="info@copelsa.org"/>
+            <IconText icon="phone" title="0994924706<br>0987492930<br>4514045" />
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="end">
+    <p class="has-text-centered">
+        © 2022 Copyright: Cepel, developed by usagiCLI
+    </p>
+</div>

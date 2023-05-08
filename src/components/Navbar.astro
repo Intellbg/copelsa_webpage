@@ -1,0 +1,179 @@
+---
+import logo from "../images/logo.png";
+---
+
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a href="/" style="padding:0%">
+      <img
+        src={logo}
+        style="height: 60px!important; padding-left: 1em; display:block"
+      />
+    </a>
+    <a
+      role="button"
+      class="navbar-burger"
+      aria-label="menu"
+      aria-expanded="false"
+      data-target="navigation"
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navigation" class="navbar-menu">
+    <div class="navbar-end">
+      <a class="navbar-item title-text" href="/"> Inicio</a>
+      <a class="navbar-item title-text" href="/nosotros">¿Quíenes Somos?</a>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link title-text"> Servicios</a>
+        <div class="navbar-dropdown is-right">
+          <div class="columns">
+            <div class="column">
+              <h2 class="title-text">Ingeniería Eléctrica</h2>
+              <a
+                class="navbar-item title-text"
+                href="/servicios/instalacion-electrica"
+              >
+                Instalaciones Eléctricas Internas
+              </a>
+              <a
+                class="navbar-item title-text"
+                href="/servicios/estudio-demanda"
+              >
+                Estudios de Demanda
+              </a>
+              <a
+                class="navbar-item title-text"
+                href="/servicios/proyectos-electricos"
+              >
+                Diseño de Proyectos Eléctricos
+              </a>
+              <a
+                class="navbar-item title-text"
+                href="/servicios/transformacion"
+                >
+                Cámaras y Centros de Transformación
+              </a>
+              <a
+                class="navbar-item title-text"
+                href="/servicios/tableros"
+              >
+                Construcción de Tableros Armarios de Medidores
+              </a>
+              <a
+                class="navbar-item title-text"
+                href="/servicios/redes"
+                >
+                Redes Aéreas Y Subterráneas
+              </a>
+              <a
+                class="navbar-item title-text"
+                href="/servicios/consultoria-electrica"
+                >
+                Consultorias En Ingeniería Eléctrica
+              </a>
+            </div>
+            <div class="column">
+              <h2 class="title-text">Ingeniería Mecánica</h2>
+              <a
+                class="navbar-item title-text"
+                href="/servicios/estructuras de acero"
+              >
+              Estructuras de Acero 
+              </a>
+              <a
+                class="navbar-item title-text"
+                href="/servicios/elementos"
+              >
+              Piezas Y Elementos de Máquinas
+              </a>
+              <a
+                class="navbar-item title-text"
+                href="/servicios/ensayos"
+              >
+              Ensayos No Destructivos
+              </a>
+              <a
+                class="navbar-item title-text"
+                href="/servicios/ensayos"
+              >
+              Aire Acondicionado Y Ventilación 
+              </a>
+              <a
+                class="navbar-item title-text"
+                href="/servicios/máquinas"
+              >
+              Diseño Y Construcción de Máquinas
+              </a>
+              <a
+                class="navbar-item title-text"
+                href="/servicios/consultoria-mecanica"
+              >
+              Consultorias En Ingeniería Mecánica
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="navbar-item title-text" href="/productos">Productos</a>
+      <a class="navbar-item title-text" href="/galeria">Galería</a>
+      <a class="navbar-item title-text" href="/contacto">Contacto</a>
+    </div>
+  </div>
+</nav>
+
+<style>
+  nav {
+    border-bottom: #395d41cb solid 8px;
+    background: linear-gradient(
+      to right,
+      #fff,
+      #fff 5%,
+      #b9e1fa 10%,
+      #b9e1fa 100%
+    );
+  }
+  .navbar-brand {
+    height: 60px;
+  }
+  a.navbar-item,
+  a.navbar-link {
+    font-size: 18px;
+    color: #22396d;
+  }
+  .navbar-dropdown a.navbar-item:hover {
+    color: #22396d;
+  }
+  a.navbar-item:hover,
+  a.navbar-link:hover {
+    color: #22396d !important;
+  }
+  
+  .navbar-dropdown {
+  }
+  h2.title-text{
+    padding-left: 1rem;
+    font-size: 24px;
+    color:#395d41cb;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const $navbarBurgers = Array.prototype.slice.call(
+      document.querySelectorAll(".navbar-burger"),
+      0
+    );
+    $navbarBurgers.forEach((el) => {
+      el.addEventListener("click", () => {
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+        el.classList.toggle("is-active");
+        $target.classList.toggle("is-active");
+      });
+    });
+  });
+</script>

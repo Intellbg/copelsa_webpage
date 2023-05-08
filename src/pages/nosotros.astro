@@ -1,0 +1,156 @@
+---
+import Layout from "../layouts/Layout.astro";
+import cover from "../images/cover_nosotros.jpg";
+import mision from "../images/mission.png";
+import vision from "../images/vision.png";
+import valores from "../images/values.png";
+---
+
+<Layout title="Nosotros">
+  <main>
+    <div class="hero">
+      <img src={cover} alt="nosotros cover" />
+    </div>
+    <div class="section">
+      <div class="container">
+        <h1 class="title-text">COPELSA</h1>
+        <p>
+          La empresa COPELSA (Construcciones de Proyectos Eléctricos Salazar) es
+          una empresa que se dedica a la realización de proyectos eléctricos de
+          distribución, telefónicos, como instalaciones residenciales, produce
+          bienes y servicios. Los servicios con la realización de diseños de los
+          planos eléctricos de redes de distribución aéreas, subterráneas, redes
+          eléctricas inteligentes y generación distribuida, diseños telefónicos,
+          diseño de instalaciones domiciliarias e industriales para aprobar en
+          las entidades municipales como es el (CAE) y la asesoría para otras
+          empresas o instituciones en todas las áreas mencionadas. Los bienes
+          los genera a partir de la construcción de todos estos diseños, así
+          como instalación de equipos electrógenos, medidores de energía
+          eléctrica inteligente y la construcción de sistemas de puesta a tierra
+          para sistemas de bajo, medio, alto y extra alto voltaje.
+        </p>
+
+        <p>
+          La empresa COPELSA trabaja como contratista calificado en la Empresa
+          Eléctrica Quito desde 2004, el alcance de esta empresa es nacional, ya
+          que ha desempeñado proyectos de redes de distribución aéreas en Costa,
+          Sierra, Amazonía e incluso ha prestado servicios en las Islas
+          Galápagos. El público objetivo son todas aquellas personas,
+          industrias, organizaciones y entidades que deseen contar con servicios
+          eléctricos integrales, al ser la energía eléctrica catalogado como un
+          servicio básico, todas las personas que deseen contar con este
+          servicio son el objetivo primordial de la empresa.
+        </p>
+      </div>
+    </div>
+    <div class="hero" style="background-color:#f2f2f2">
+      <div class="container">
+        <div class="section">
+          <h2 class="title-text">Misión</h2>
+          <div class="columns">
+            <div class="column">
+              <p>
+                Somos una empresa destinada a desarrollar e implementar
+                soluciones integrales de Ingeniería Eléctrica y Mecánica en
+                todas las áreas, residencial, comercial, industrial y sistemas
+                de alto voltaje, que sean técnicamente factibles, económicamente
+                rentables y que perduren en el tiempo; con atención
+                personalizada en las etapas de inicio, planificación, ejecución
+                y cierre de cada proyecto, con un servicio postventa que
+                garantice la operatividad de las soluciones desarrolladas;
+                generando confianza a través de los valores con los cuales se
+                rige la empresa: honestidad, responsabilidad, puntualidad,
+                innovación, compromiso ambiental y compromiso social, así se
+                aporta al desarrollo del país y de la sociedad.
+              </p>
+            </div>
+            <div class="column has-text-centered">
+              <img class="us-icon" src={mision} />
+            </div>
+          </div>
+          <hr />
+          <div class="columns">
+            <div class="column has-text-centered">
+              <img class="us-icon" src={vision} />
+            </div>
+            <div class="column">
+              <h2 class="title-text">Visión</h2>
+              <p>
+                Para enero del 2028 COPELSA será una empresa líder en la
+                construcción de todo tipo de proyecto civil, mecánico y
+                eléctrico, tanto en el diseño como en la construcción e
+                instalación de sistemas mecánicos y eléctricos, lo que
+                fortalecerá el vínculo con los clientes, con una mejora continua
+                de procesos, apoyándose en el talento humano que es y será el
+                pilar más importante, así como el conocimiento de los
+                profesionales que forman parte de la empresa, se convertirá en
+                una experiencia de servicios. Usando las herramientas
+                tecnológicas que proporcione el avance científico de una manera
+                eficiente e innovadora se darán soluciones rápidas y confiables
+                de Ingeniería Eléctrica y Mecánica.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="section">
+        <div class="columns">
+          <div class="column">
+            <h2 class="title-text">Valores</h2>
+            <ul>
+              <li>Integridad</li>
+              <li>Responsabilidad con el medio ambiente</li>
+              <li>Honestidad</li>
+              <li>Puntualidad</li>
+              <li>Confiabilidad</li>
+              <li>Respeto hacia nuestros clientes</li>
+            </ul>
+          </div>
+          <div class="column has-text-centered">
+            <img class="us-icon" src={valores} />
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  hr {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background-color: #14c74a !important;
+    height: 1px;
+  }
+  img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+  p {
+    margin-bottom: 1em;
+  }
+  .us-icon {
+    height: 250px;
+    width: 250px;
+    background-color: #fff;
+    border: solid black 1px;
+    border-radius: 50%;
+    padding: 1em;
+    box-shadow: 1px 1px 10px #000c;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  li:before {
+    content: "bolt";
+    color: #fccc2b;
+    font-family: Material Icons;
+  }
+</style>
