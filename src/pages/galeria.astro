@@ -1,0 +1,62 @@
+---
+import Layout from "../layouts/Layout.astro";
+const images = await Astro.glob("../images/galeria/*").then((files) => {
+    return files.map((file) => file.default);
+});
+---
+
+<Layout title="Galeria">
+    <main>  
+        <div class="section">
+            <div class="container">
+                <h1 class="text has-text-centered">Nuestro Trabajo</h1>
+                <div class="columns is-flex-wrap-wrap">
+                    {
+                        images.map((data) => (
+                            <div class="column is-one-quarter">
+                                <div>
+                                    <img src={data} alt="" />
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    .section {
+        background-image: linear-gradient(#395d41cb, #0527fe);
+        background-repeat: no-repeat;
+        color: #fff
+    }
+    hr {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        background-color: #14c74a !important;
+        height: 1px;
+    }
+    img {
+        height: 200px;
+        width: 250px;
+        object-fit: cover;
+    }
+    p {
+        margin-bottom: 1em;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    li:before {
+        content: "bolt";
+        color: #fccc2b;
+        font-family: Material Icons;
+    }
+</style>

@@ -1,9 +1,113 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
+import ParalaxTitle from "../components/ParalaxTitle.astro";
+import electrica from "../images/galeria/galery1-min.jpg";
+import mecanica from "../images/ing-m.jpg";
+import producto from "../images/productos/tableros.png";
+const electrical_server = await Astro.glob("../pages/servicios/electrica/*.mdx")
 ---
 
 <Layout title="COPELSA | INGENIERÍA ELÉCTRICA Y MECÁNICA Quito, Ecuador">
-	<main>
-	</main>
+  <main>
+    <ParalaxTitle imagen="c1" title="" />
+    <div class="section">
+      <div class="container">
+        <p>
+          COPELSA (Construcciones de Proyectos Eléctricos Salazar) es una
+          empresa ecuatoriana de Ingeniería Eléctrica y Mecánica, que se dedica
+          al estudio, planificación y construcción de proyectos eléctricos de
+          distribución, telefónicos e instalaciones residenciales; además de
+          proyectos mecánicos, como el diseño y construcción de sistemas
+          contraincendios, estructuras de acero, máquinas, control de calidad en
+          soldadura, ensayos no destructivos, entre otros. Cuenta con
+          profesionales capacitados dentro de las respectivas áreas, que
+          permiten una correcta planificación y ejecución de los distintos
+          proyectos con la aprobación de estos en entidades municipales como lo
+          es el CAE, Cuerpo de Bomberos de Quito, etc. COPELSA trabaja desde
+          2004 como contratista calificado en la Empresa Eléctrica Quito (EEQ),
+          nuestra razón de ser es el compromiso que tenemos con nuestros
+          clientes para ofrecer soluciones efectivas dentro de la Ingeniería
+          Eléctrica y Mecánica.
+        </p>
+      </div>
+    </div>
+    <ParalaxTitle imagen="c2" title="Servicios" />
+    <div class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column">
+            <h1 class="title-text">Ingeniería Eléctrica</h1>
+            <ul>{electrical_server.map((service)=><li><a href={service.frontmatter.url} class='navbar-item'>{service.frontmatter.title}</a></li>)}
+            </ul>
+          </div>
+          <div class="column">
+            <img src={electrica} alt="" />
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <img src={mecanica} alt="" />
+          </div>
+          <div class="column">
+            <h1 class="title-text">Ingeniería Mecánica</h1>
+            <a
+              class="navbar-item title-text"
+              href="/servicios/estructuras de acero"
+            >
+              Estructuras de Acero
+            </a>
+            <a class="navbar-item title-text" href="/servicios/elementos">
+              Piezas Y Elementos de Máquinas
+            </a>
+            <a class="navbar-item title-text" href="/servicios/ensayos">
+              Ensayos No Destructivos
+            </a>
+            <a class="navbar-item title-text" href="/servicios/ensayos">
+              Aire Acondicionado Y Ventilación
+            </a>
+            <a class="navbar-item title-text" href="/servicios/máquinas">
+              Diseño Y Construcción de Máquinas
+            </a>
+            <a
+              class="navbar-item title-text"
+              href="/servicios/consultoria-mecanica"
+            >
+              Consultorias En Ingeniería Mecánica
+            </a>
+          </div>
+        </div>
+        <p>
+          Todos nuestros servicios se realizan para garantizada su aprobación en
+          las instiruciones como: CAE, EEQ
+        </p>
+      </div>
+    </div>
+    <ParalaxTitle imagen="c3" title="Productos" />
+    <div class="section">
+      <div class="container has-text-centered">
+        <img src={producto} alt="" id="producto" />
+        <p class="has-text-centered">
+          Contamos con productos de la mejor calidad.<br />
+          Todo lo que necesita para sus instalaciones
+        </p><br /><a href="/productos" class="btn button">Ver más</a>
+      </div>
+    </div>
+    <ParalaxTitle imagen="c4" title="" />
+  </main>
+
+  <style>
+    h1.title-text {
+      font-size: 1.5rem;
+    }
+    #producto {
+      max-height: 200px;
+    }
+    .button {
+      background-color: #fccc2b !important;
+    }
+    .button:hover {
+      background-color: #395d41 !important;
+      color: white !important;
+    }
+  </style>
 </Layout>

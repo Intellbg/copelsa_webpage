@@ -1,0 +1,70 @@
+---
+export interface Props {
+    imagen: string;
+    title: string;
+}
+const { imagen,title } = Astro.props;
+
+---
+
+<section id={imagen} class="hero is-large">
+    <h1 class="title-text parallax-title">{title}</h1>
+</section>
+
+<style is:global>
+    .hero{
+        width: 100%;
+        position: relative;
+    }
+
+    .parallax-title{
+        background-color:#00000080;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        color: white;
+        margin: 0%;
+        text-align: center;
+        padding: 1rem;
+        font-size: 2rem;
+    }
+
+    #c1 {
+        background: url("/src/images/cover1.jpg");
+        max-height: 400px;
+        min-height: 400px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #c2 {
+        background: url("/src/images/cover2.jpg");
+        max-height: 400px;
+        min-height: 400px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #c3 {
+        background: url("/src/images/cover3.jpg");
+        max-height: 400px;
+        min-height: 400px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #c4 {
+        background: url("/src/images/cover4.jpg");
+        max-height: 400px;
+        min-height: 400px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+</style>

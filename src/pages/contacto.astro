@@ -17,7 +17,10 @@ import IconText from "../components/IconText.astro";
               title='Julio Moreno y Rosario del Alcazar, Quito 170801<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13419.907538757769!2d-78.48140051606445!3d-0.30340071557305237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d5bd063fa71fab%3A0xd8f35642c6ae205f!2sCOPELSA!5e0!3m2!1sen!2sec!4v1648098656367!5m2!1sen!2sec" width="100%" height="150" allowfullscreen="" loading="lazy" style="border: 0;"></iframe>'
             />
             <hr />
-            <IconText icon="email" title="info@copelsa.org<br>inghectorsalazar@copelsa.org<br>ingluissalazar@copelsa.org" />
+            <IconText
+              icon="email"
+              title="info@copelsa.org<br>inghectorsalazar@copelsa.org<br>ingluissalazar@copelsa.org"
+            />
             <hr />
             <IconText icon="schedule" title="Lunes a Viernes<br>8:00-18:00" />
             <hr />
@@ -80,12 +83,14 @@ import IconText from "../components/IconText.astro";
 
               <div class="field">
                 <div class="control has-text-centered">
-                  <button class="button"
-                    >Enviar</button
-                  >
+                  <button class="button">Enviar</button>
                 </div>
               </div>
             </form>
+            <hr>
+            <div style="max-width: 40px; margin:auto;">
+              <a href="https://www.facebook.com/copelsaingenieriaelectrica/" style="text-align: center;"><fa-icon  class="ng-fa-icon"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook" class="svg-inline--fa fa-facebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.8 90.69 226.4 209.3 245V327.7h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.3 482.4 504 379.8 504 256z"></path></svg></fa-icon></a>
+            </div>
           </div>
         </div>
       </div>
@@ -100,7 +105,9 @@ import IconText from "../components/IconText.astro";
   #info span {
     font-size: 2rem;
   }
-
+  h1.title-text {
+    font-size: 1.5rem;
+  }
   .container {
     border: 1px solid #000000;
     box-sizing: border-box;
