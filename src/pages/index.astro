@@ -7,6 +7,9 @@ import producto from "../images/productos/tableros.png";
 const electrical_server = await Astro.glob(
   "../pages/servicios/electrica/*.mdx"
 );
+const mechanical_services = await Astro.glob(
+  "../pages/servicios/mecanica/*.mdx"
+);
 ---
 
 <Layout title="COPELSA | INGENIERÍA ELÉCTRICA Y MECÁNICA Quito, Ecuador">
@@ -61,30 +64,17 @@ const electrical_server = await Astro.glob(
           </div>
           <div class="column">
             <h1 class="title-text">Ingeniería Mecánica</h1>
-            <a
-              class="navbar-item title-text"
-              href="/servicios/estructuras de acero"
-            >
-              Estructuras de Acero
-            </a>
-            <a class="navbar-item title-text" href="/servicios/elementos">
-              Piezas Y Elementos de Máquinas
-            </a>
-            <a class="navbar-item title-text" href="/servicios/ensayos">
-              Ensayos No Destructivos
-            </a>
-            <a class="navbar-item title-text" href="/servicios/ensayos">
-              Aire Acondicionado Y Ventilación
-            </a>
-            <a class="navbar-item title-text" href="/servicios/máquinas">
-              Diseño Y Construcción de Máquinas
-            </a>
-            <a
-              class="navbar-item title-text"
-              href="/servicios/consultoria-mecanica"
-            >
-              Consultorias En Ingeniería Mecánica
-            </a>
+            <ul>
+              {
+                mechanical_services.map((service) => (
+                  <li>
+                    <a href={service.frontmatter.url} class="navbar-item">
+                      {service.frontmatter.title}
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
           </div>
         </div>
         <p>
