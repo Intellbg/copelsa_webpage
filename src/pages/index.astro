@@ -4,7 +4,9 @@ import ParalaxTitle from "../components/ParalaxTitle.astro";
 import electrica from "../images/galeria/galery1-min.jpg";
 import mecanica from "../images/ing-m.jpg";
 import producto from "../images/productos/tableros.png";
-const electrical_server = await Astro.glob("../pages/servicios/electrica/*.mdx")
+const electrical_server = await Astro.glob(
+  "../pages/servicios/electrica/*.mdx"
+);
 ---
 
 <Layout title="COPELSA | INGENIERÍA ELÉCTRICA Y MECÁNICA Quito, Ecuador">
@@ -37,7 +39,16 @@ const electrical_server = await Astro.glob("../pages/servicios/electrica/*.mdx")
         <div class="columns">
           <div class="column">
             <h1 class="title-text">Ingeniería Eléctrica</h1>
-            <ul>{electrical_server.map((service)=><li><a href={service.frontmatter.url} class='navbar-item'>{service.frontmatter.title}</a></li>)}
+            <ul>
+              {
+                electrical_server.map((service) => (
+                  <li>
+                    <a href={service.frontmatter.url} class="navbar-item">
+                      {service.frontmatter.title}
+                    </a>
+                  </li>
+                ))
+              }
             </ul>
           </div>
           <div class="column">
@@ -85,29 +96,37 @@ const electrical_server = await Astro.glob("../pages/servicios/electrica/*.mdx")
     <ParalaxTitle imagen="c3" title="Productos" />
     <div class="section">
       <div class="container has-text-centered">
-        <img src={producto} alt="" id="producto" />
-        <p class="has-text-centered">
-          Contamos con productos de la mejor calidad.<br />
-          Todo lo que necesita para sus instalaciones
-        </p><br /><a href="/productos" class="btn button">Ver más</a>
+        <div class="columns">
+          <div class="column is-one-quarter">
+            <img src={producto} alt="" id="producto" />
+          </div>
+          <div class="column is-three-quarters is-flex is-align-items-center is-flex-direction-column is-justify-content-center">
+            <p class="has-text-centered" style="font-size: 1.5rem;">
+              Contamos con productos de la mejor calidad.<br />
+              Todo lo que necesita para sus instalaciones
+            </p><br /><a href="/productos" class="btn button" style="width:fit-content; text-aling:center">Ver más</a>
+          </div>
+        </div>
       </div>
     </div>
     <ParalaxTitle imagen="c4" title="" />
-  </main>
 
-  <style>
-    h1.title-text {
-      font-size: 1.5rem;
-    }
-    #producto {
-      max-height: 200px;
-    }
-    .button {
-      background-color: #fccc2b !important;
-    }
-    .button:hover {
-      background-color: #395d41 !important;
-      color: white !important;
-    }
-  </style>
+    <style>
+      h1.title-text {
+        font-size: 1.5rem;
+      }
+      #producto {
+        width: auto;
+        max-height: 250px;
+        background-size: cover
+      }
+      .button {
+        background-color: #fccc2b !important;
+      }
+      .button:hover {
+        background-color: #395d41 !important;
+        color: white !important;
+      }
+    </style>
+  </main>
 </Layout>

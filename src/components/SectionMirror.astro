@@ -1,0 +1,36 @@
+---
+export interface Props {
+    title: string;
+    img:string;
+}
+const { title,img } = Astro.props;
+---
+<div class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-flex is-flex-direction-column is-aling-items-center is-justify-content-center">
+                <img src={img} slot="right" style='padding:1.5em'/>
+            </div>
+            
+            <div class="column is-flex is-flex-direction-column is-aling-items-center is-justify-content-center padded body">
+                <h1 class='title-text blue'>{title}</h1>
+                <slot/>
+            </div>
+        </div>
+    </div>
+</div>
+<hr class="blue-background">
+
+<style>
+    img{
+        max-height: 400px;
+    }
+    hr{
+        width: 80%;
+        height: 1px;
+        margin: auto;
+    }
+.section{background-color: azure;}
+.body h1{font-size: 1.5rem;}
+    .body p{font-size: 1.25rem;}
+</style>

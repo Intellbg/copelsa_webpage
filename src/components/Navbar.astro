@@ -1,6 +1,7 @@
 ---
 import logo from "../images/logo.png";
-const electrical_server = await Astro.glob("../pages/servicios/electrica/*.mdx")
+const electrical_services = await Astro.glob("../pages/servicios/electrica/*.mdx")
+const mechanical_services = await Astro.glob("../pages/servicios/mecanica/*.mdx")
 
 ---
 
@@ -35,46 +36,11 @@ const electrical_server = await Astro.glob("../pages/servicios/electrica/*.mdx")
           <div class="columns">
             <div class="column">
               <h2 class="title-text">Ingeniería Eléctrica</h2>
-              {electrical_server.map((service)=><a href={service.frontmatter.url} class='navbar-item'>{service.frontmatter.title}</a>)}
+              {electrical_services.map((service)=><a href={service.frontmatter.url} class='navbar-item title-text'>{service.frontmatter.title}</a>)}
             </div>
             <div class="column">
               <h2 class="title-text">Ingeniería Mecánica</h2>
-              <a
-                class="navbar-item title-text"
-                href="/servicios/estructuras de acero"
-              >
-              Estructuras de Acero 
-              </a>
-              <a
-                class="navbar-item title-text"
-                href="/servicios/elementos"
-              >
-              Piezas Y Elementos de Máquinas
-              </a>
-              <a
-                class="navbar-item title-text"
-                href="/servicios/ensayos"
-              >
-              Ensayos No Destructivos
-              </a>
-              <a
-                class="navbar-item title-text"
-                href="/servicios/ensayos"
-              >
-              Aire Acondicionado Y Ventilación 
-              </a>
-              <a
-                class="navbar-item title-text"
-                href="/servicios/máquinas"
-              >
-              Diseño Y Construcción de Máquinas
-              </a>
-              <a
-                class="navbar-item title-text"
-                href="/servicios/consultoria-mecanica"
-              >
-              Consultorias En Ingeniería Mecánica
-              </a>
+              {mechanical_services.map((service)=><a href={service.frontmatter.url} class='navbar-item title-text'>{service.frontmatter.title}</a>)}
             </div>
           </div>
         </div>
