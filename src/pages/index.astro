@@ -54,13 +54,15 @@ const mechanical_services = await Astro.glob(
               }
             </ul>
           </div>
-          <div class="column">
-            <img src={electrica} alt="" />
+          <div class="column is-flex is-flex-direction-column is-aling-items-center is-justify-content-center">
+            <img src={electrica} alt="" class="index-img" />
           </div>
         </div>
         <div class="columns">
-          <div class="column">
-            <img src={mecanica} alt="" />
+          <div class="column is-flex is-flex-direction-column is-aling-items-center is-justify-content-center">
+            <div class="container">
+              <img src={mecanica} alt="" class="index-img"/>
+            </div>
           </div>
           <div class="column">
             <h1 class="title-text">Ingeniería Mecánica</h1>
@@ -122,6 +124,10 @@ const mechanical_services = await Astro.glob(
       .button:hover {
         background-color: #395d41 !important;
         color: white !important;
+      }
+      .index-img{
+        max-height: 300px;
+        margin: auto;
       }
     </style>
   </main>
