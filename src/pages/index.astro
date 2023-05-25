@@ -18,13 +18,13 @@ const mechanical_services = await Astro.glob(
     <div class="section">
       <div class="container">
         <p>
-          COPELSA (Construcciones de Proyectos Eléctricos Salazar) es una
-          empresa ecuatoriana de Ingeniería Eléctrica y Mecánica, que se dedica
-          al estudio, planificación y construcción de proyectos eléctricos de
-          distribución, telefónicos e instalaciones residenciales; además de
-          proyectos mecánicos, como el diseño y construcción de sistemas
-          contraincendios, estructuras de acero, máquinas, control de calidad en
-          soldadura, ensayos no destructivos, entre otros. Cuenta con
+          COPELSA (Construcciones de Proyectos Eléctricos y Mecánicos Salazar)
+          es una empresa ecuatoriana de Ingeniería Eléctrica y Mecánica, que se
+          dedica al estudio, planificación y construcción de proyectos
+          eléctricos de distribución, telefónicos e instalaciones residenciales;
+          además de proyectos mecánicos, como el diseño y construcción de
+          sistemas contraincendios, estructuras de acero, máquinas, control de
+          calidad en soldadura, ensayos no destructivos, entre otros. Cuenta con
           profesionales capacitados dentro de las respectivas áreas, que
           permiten una correcta planificación y ejecución de los distintos
           proyectos con la aprobación de estos en entidades municipales como lo
@@ -90,11 +90,17 @@ const mechanical_services = await Astro.glob(
           <div class="column is-one-quarter">
             <img src={producto} alt="" id="producto" />
           </div>
-          <div class="column is-three-quarters is-flex is-align-items-center is-flex-direction-column is-justify-content-center">
+          <div
+            class="column is-three-quarters is-flex is-align-items-center is-flex-direction-column is-justify-content-center"
+          >
             <p class="has-text-centered" style="font-size: 1.5rem;">
               Contamos con productos de la mejor calidad.<br />
               Todo lo que necesita para sus instalaciones
-            </p><br /><a href="/productos" class="btn button" style="width:fit-content; text-aling:center">Ver más</a>
+            </p><br /><a
+              href="/productos"
+              class="btn button"
+              style="width:fit-content; text-aling:center">Ver más</a
+            >
           </div>
         </div>
       </div>
@@ -108,7 +114,7 @@ const mechanical_services = await Astro.glob(
       #producto {
         width: auto;
         max-height: 250px;
-        background-size: cover
+        background-size: cover;
       }
       .button {
         background-color: #fccc2b !important;
