@@ -6,11 +6,17 @@ layout: "../../../layouts/Layout.astro"
 
 import Section from "../../../components/Section.astro";
 import Cover from "../../../components/Cover.astro";
+import Carousel from "../../../components/Carousel.astro";
 import imagen from "../../../images/servicios/electrica/proyecto/a1.jpg";
+import imagen2 from "../../../images/servicios/electrica/proyecto/a2.png";
+import imagen3 from "../../../images/servicios/electrica/proyecto/a3.png";
+export const cover = imagen
 
 <Cover title={frontmatter.title}/>
-<Section img={imagen} title='Diseño Y Construcción De Proyectos Eléctricos Aprobados En La EEQ'>
+<Section title='Diseño Y Construcción De Proyectos Eléctricos Aprobados En La EEQ'>
 <p slot="left">
 Diseño, planificación y construcción de proyectos eléctricos de edificios conjuntos, urbanizaciones, lotizaciones, etc, aprobados en la EEQ y construidos bajo las normativas de dicha entidad distribuidora.
 </p>
+<Carousel images={[imagen2,imagen,imagen3]} slot='right'/>
+
 </Section>

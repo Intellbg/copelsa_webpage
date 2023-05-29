@@ -6,7 +6,11 @@ layout: "../../../layouts/Layout.astro"
 
 import Section from "../../../components/Section.astro";
 import Cover from "../../../components/Cover.astro";
+import Carousel from "../../../components/Carousel.astro";
 import imagen from "../../../images/servicios/electrica/mallas/a1.jpg";
+import imagen2 from "../../../images/servicios/electrica/mallas/a2.png";
+import imagen3 from "../../../images/servicios/electrica/mallas/a3.png";
+export const cover = imagen
 
 <Cover title={frontmatter.title}/>
 <Section img={imagen}>
@@ -16,4 +20,6 @@ Construcción de mallas de tierra y mejoramiento de esta hasta obtener los valor
 
 Además, montaje de pararrayos para galpones, edificios y otros según las necesidades del inmueble a proteger.
 </p>
+<Carousel images={[imagen2,imagen,imagen3]} slot='right'/>
+
 </Section>

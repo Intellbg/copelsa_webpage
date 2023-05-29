@@ -13,18 +13,20 @@ const mechanical_services = await Astro.glob("./mecanica/*.mdx");
           {
             electrical_server.map((data) => (
               <div class="column is-one-quarter">
-                <div class="card">
-                  <div class="card-image">
-                    <figure class="image is-4by3">
-                      <img src={data.frontmatter.imagen} alt="image" />
-                    </figure>
-                  </div>
-                  <div class="card-content">
-                    <div class="content">
-                      <h2>{data.frontmatter.title}</h2>
+                <a href={data.frontmatter.url}>
+                  <div class="card">
+                    <div class="card-image">
+                      <figure class="image is-4by3">
+                        <img src={data.cover} alt={data.title} />
+                      </figure>
+                    </div>
+                    <div class="card-content">
+                      <div class="content">
+                        <h2>{data.frontmatter.title}</h2>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
             ))
           }
@@ -37,19 +39,21 @@ const mechanical_services = await Astro.glob("./mecanica/*.mdx");
         <div class="columns is-flex-wrap-wrap">
           {
             mechanical_services.map((data) => (
-              <div class="column is-one-third">
-                <div class="card">
-                  <div class="card-image">
-                    <figure class="image is-4by3">
-                      <img src={data.frontmatter.imagen} alt="image" />
-                    </figure>
-                  </div>
-                  <div class="card-content">
-                    <div class="content">
-                      <h2>{data.frontmatter.title}</h2>
+              <div class="column is-one-quarter">
+                <a href={data.frontmatter.url}>
+                  <div class="card">
+                    <div class="card-image">
+                      <figure class="image is-4by3">
+                        <img src={data.cover} alt={data.title} />
+                      </figure>
+                    </div>
+                    <div class="card-content">
+                      <div class="content">
+                        <h2>{data.frontmatter.title}</h2>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
             ))
           }
@@ -63,7 +67,7 @@ const mechanical_services = await Astro.glob("./mecanica/*.mdx");
   .section {
     background-repeat: no-repeat;
   }
-  .card{
+  .card {
     height: 100%;
   }
   img {
@@ -78,14 +82,25 @@ const mechanical_services = await Astro.glob("./mecanica/*.mdx");
   h1 {
     font-size: 2rem;
   }
+  .content {
+    height: 100%;
+  }
   .content h2 {
     font-size: 1.25rem;
     text-align: center;
+    margin: 0%;
+    height: 100%;
   }
 
   li:before {
     content: "bolt";
     color: #fccc2b;
     font-family: Material Icons;
+  }
+  .card:hover img {
+    transform: scale(1.2);
+  }
+  .card {
+    overflow: hidden;
   }
 </style>

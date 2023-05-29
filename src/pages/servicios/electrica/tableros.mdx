@@ -1,16 +1,32 @@
 ---
 title: Tableros Armarios Y De Distribución Principal
-url: '/servicios/electrica/tableros'
+url: "/servicios/electrica/tableros"
 layout: "../../../layouts/Layout.astro"
 ---
 
 import Section from "../../../components/Section.astro";
 import Cover from "../../../components/Cover.astro";
+import Carousel from "../../../components/Carousel.astro";
 import imagen from "../../../images/servicios/electrica/construccion/a1.jpg";
+import imagen2 from "../../../images/servicios/electrica/construccion/a2.png";
+import imagen3 from "../../../images/servicios/electrica/construccion/a3.png";
+import imagen4 from "../../../images/servicios/electrica/construccion/a4.png";
+import imagen5 from "../../../images/servicios/electrica/construccion/a5.png";
+import imagen6 from "../../../images/servicios/electrica/construccion/a6.png";
+import imagen7 from "../../../images/servicios/electrica/construccion/a7.png";
+export const cover = imagen;
 
-<Cover title={frontmatter.title}/>
-<Section img={imagen} title='Construcción'>
-<p slot="left">
-Elaboración de tableros armarios de medidores, cumpliendo las normativas de la Empresa Eléctrica Quito y gestión ante dicha entidad para su aprobación, además la elaboración de Tableros de Distribución Principal (TDP) para cualquier distribución de circuitos.
-</p>
+<Cover title={frontmatter.title} />
+<Section img={imagen} title="Construcción">
+  <p slot="left">
+    Elaboración de tableros armarios de medidores, cumpliendo las normativas de
+    la Empresa Eléctrica Quito y gestión ante dicha entidad para su aprobación,
+    además la elaboración de Tableros de Distribución Principal (TDP) para
+    cualquier distribución de circuitos.
+  </p>
+  <Carousel
+    images={[imagen2, imagen, imagen3, imagen4, imagen5, imagen6, imagen7]}
+    slot="right"
+    carrouselID="1"
+  />
 </Section>

@@ -15,12 +15,12 @@ const { title, img } = Astro.props;
         <h1 class="title-text blue">{title}</h1>
         <slot name="left" />
       </div>
-
+      
       <div
-        class="column is-flex is-flex-direction-column is-aling-items-center is-justify-content-center padded"
+      class="column is-flex is-flex-direction-column is-aling-items-center is-justify-content-center padded"
       >
-        <div class="container">
-          <img src={img}  style="max-height: 350px;"/>
+      <div class="container">
+          <slot name="right" />
         </div>
       </div>
     </div>

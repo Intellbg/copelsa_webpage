@@ -5,11 +5,19 @@ layout: "../../../layouts/Layout.astro"
 ---
 import Section from "../../../components/Section.astro";
 import Cover from "../../../components/Cover.astro";
+import Carousel from "../../../components/Carousel.astro";
 import imagen from "../../../images/servicios/mecanica/ensayos-no-destructivos/a1.jpg"
+import imagen2 from "../../../images/servicios/mecanica/ensayos-no-destructivos/a2.jpg"
+import imagen3 from "../../../images/servicios/mecanica/ensayos-no-destructivos/a3.jpg"
+import imagen4 from "../../../images/servicios/mecanica/ensayos-no-destructivos/a4.jpg"
+import imagen5 from "../../../images/servicios/mecanica/ensayos-no-destructivos/a5.jpg"
+export const cover = imagen
 
 <Cover title={frontmatter.title}/>
 <Section img={imagen} title='Ensayos No Destructivos VT, PT, MT, y UT'>
 <p slot="left">
 Este servicio está enfocado tanto para control de calidad en la estructuras de acero, posterior a su construcción y montajes, como para la detección de defectos en elementos o piezas mecánicas de cualquier material; especialmente metales y polímeros. La realización de los ensayos y emisión de reportes técnicos con los resultados de las inspecciones son realizados por inspectores de ensayos no destructivos Nivel ASNT II, utilizando normas ASME, API, NEC, etc. Con el fin de garantizar eficacia, y optimizar costos.  
 </p>
+<Carousel images={[imagen2,imagen,imagen3,imagen4,imagen5]} slot='right'/>
+
 </Section>

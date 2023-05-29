@@ -5,11 +5,19 @@ layout: "../../../layouts/Layout.astro"
 ---
 import Section from "../../../components/Section.astro";
 import Cover from "../../../components/Cover.astro";
+import Carousel from "../../../components/Carousel.astro";
 import imagen from "../../../images/servicios/mecanica/sistemas-contraincendios/a1.jpg"
+import imagen2 from "../../../images/servicios/mecanica/sistemas-contraincendios/a2.jpg"
+import imagen3 from "../../../images/servicios/mecanica/sistemas-contraincendios/a3.jpg"
+import imagen4 from "../../../images/servicios/mecanica/sistemas-contraincendios/a4.jpg"
+import imagen5 from "../../../images/servicios/mecanica/sistemas-contraincendios/a5.jpg"
+export const cover = imagen
 
 <Cover title={frontmatter.title}/>
 <Section img={imagen}>
 <p slot="left">
 Realizamos el diseño y construcción de los sistemas contraincendios de detección y alarmas, medios de egreso y supresión de incendios por agua o por cualquier tipo de sustancia química. Los diseños son realizados por profesionales que dominan las normas NFPA, y las Reglas Técnicas Municipales, con el fin de ser aprobados por el Cuerpo de Bomberos de Quito. La construcción se realiza con técnicos altamente calificados y experimentados en el área de sistemas de bombeo, tuberías y control. 
 </p>
+<Carousel images={[imagen2,imagen,imagen3,imagen4,imagen5]} slot='right'/>
+
 </Section>

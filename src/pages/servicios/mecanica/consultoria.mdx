@@ -5,11 +5,17 @@ layout: "../../../layouts/Layout.astro"
 ---
 import Section from "../../../components/Section.astro";
 import Cover from "../../../components/Cover.astro";
+import Carousel from "../../../components/Carousel.astro";
 import imagen from "../../../images/servicios/mecanica/consultoria/a1.jpg"
+import imagen2 from "../../../images/servicios/mecanica/consultoria/a2.jpg"
+import imagen3 from "../../../images/servicios/mecanica/consultoria/a3.jpg"
+import imagen4 from "../../../images/servicios/mecanica/consultoria/a4.jpg"
+export const cover = imagen
 
 <Cover title={frontmatter.title}/>
 <Section img={imagen}>
 <p slot="left">
 Dentro de la ingeniería mecánica, se tienen sistemas mecánicos, térmicos e ingeniería de materiales. Es por esta razón que se ha implementado un departamento enfocado a la realización de todo tipo de análisis, simulaciones, consultoría, realización de proyectos, entre otros, para solventar requerimientos de cualquier índole en ingeniería mecánica. Por ejemplo: simulación por CFD, análisis por elementos finitos, análisis de corrosión, análisis metalográfico, análisis de turbo maquinaria y centrales térmicas, entre otros. 
 </p>
+<Carousel images={[imagen2,imagen,imagen3,imagen4,]} slot='right'/>
 </Section>

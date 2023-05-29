@@ -5,11 +5,17 @@ layout: "../../../layouts/Layout.astro"
 ---
 import Section from "../../../components/Section.astro";
 import Cover from "../../../components/Cover.astro";
+import Carousel from "../../../components/Carousel.astro";
+
 import imagen from "../../../images/servicios/electrica/instalaciones/a1.jpg";
+import imagen2 from "../../../images/servicios/electrica/instalaciones/a2.png";
+import imagen3 from "../../../images/servicios/electrica/instalaciones/a3.png";
+export const cover = imagen
 
 <Cover title={frontmatter.title}/>
-<Section title='Diseño De Planos' img={imagen}>
+<Section title='Diseño De Planos'>
 <p slot="left">
 Elaboración de planos eléctricos para aprobar en las entidades municipales como es el CAE (memoria técnica, cálculo de la demanda, cálculo de caídas de voltaje y otros). Construcción de instalaciones eléctricas internas residenciales, comerciales e industriales.
 </p>
+<Carousel images={[imagen2,imagen,imagen3]} slot='right'/>
 </Section>

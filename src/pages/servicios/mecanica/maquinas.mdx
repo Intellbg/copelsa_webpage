@@ -4,12 +4,19 @@ url: '/servicios/mecanica/maquinas'
 layout: "../../../layouts/Layout.astro"
 ---
 import Section from "../../../components/Section.astro";
+import Carousel from "../../../components/Carousel.astro";
 import Cover from "../../../components/Cover.astro";
 import imagen from "../../../images/servicios/mecanica/maquinas/a1.jpg"
+import imagen2 from "../../../images/servicios/mecanica/maquinas/a2.jpg"
+import imagen3 from "../../../images/servicios/mecanica/maquinas/a3.jpg"
+import imagen4 from "../../../images/servicios/mecanica/maquinas/a4.jpg"
+export const cover = imagen
 
 <Cover title={frontmatter.title}/>
 <Section img={imagen}>
 <p slot="left">
 COPELSA cuenta con profesionales capaces de diseñar y manufacturar todo tipo de máquina, acorde a las necesidades del cliente, incluyendo su implementación eléctrica, computacional y electrónica.  Las máquinas pueden ser fabricadas, tanto por manufactura aditiva, como con procesos tradicionales, para los cuales COPELSA tiene los recursos y las posibilidades para efectuarlos. 
 </p>
+<Carousel images={[imagen2,imagen,imagen3,imagen4]} slot='right'/>
+
 </Section>

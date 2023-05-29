@@ -6,16 +6,25 @@ layout: "../../../layouts/Layout.astro"
 
 import Section from "../../../components/Section.astro";
 import SectionMirror from "../../../components/SectionMirror.astro";
+import Carousel from "../../../components/Carousel.astro";
 import Cover from "../../../components/Cover.astro";
 import imagen from "../../../images/servicios/electrica/transformacion/a1.jpg";
-import imagen2 from "../../../images/servicios/electrica/transformacion/b1.jpg";
+import imagen2 from "../../../images/servicios/electrica/transformacion/a2.png";
+import imagen3 from "../../../images/servicios/electrica/transformacion/a3.png";
+import imagenb from "../../../images/servicios/electrica/transformacion/b1.jpg";
+import imagenb2 from "../../../images/servicios/electrica/transformacion/b2.png";
+import imagenb3 from "../../../images/servicios/electrica/transformacion/b3.png";
+export const cover = imagen
 
 <Cover title={frontmatter.title}/>
-<Section img={imagen} title='Construcción'>
+<Section title='Construcción'>
 <p slot="left">
 Montaje de cámaras de transformación convencionales, frente muerto, padmounted y torres de transformación para todo tipo de inmueble y bajo normativas de la EEQ
 </p>
+<Carousel images={[imagen2,imagen,imagen3]} slot='right'/>
+
 </Section>
-<SectionMirror img={imagen2} title='Mantenimiento'>
+<SectionMirror  title='Mantenimiento'>
+<Carousel images={[imagenb,imagenb2,imagenb3]} slot='left' carrouselID='1'/>
 Ejecución del mantenimiento de las cámaras de transformación limpieza de sus accesorios, comprobación de niveles de voltaje, estado del aceite y otros, trámites y coordinación con la Empresa Eléctrica Quito.
 </SectionMirror>
