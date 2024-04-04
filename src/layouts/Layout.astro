@@ -1,7 +1,6 @@
 ---
 import "bulma/css/bulma.min.css";
 import Navbar from "../components/Navbar.astro";
-import favicon from "../images/favicon.ico";
 import Footer from "../components/Footer.astro";
 import CallToACtion from "../components/CallToAction.astro";
 export interface Props {
@@ -17,7 +16,7 @@ const { title, show_call_to_action = true } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/x-icon" href={favicon} />
+    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Intellbg/copelsa_webpage/main/src/images/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
