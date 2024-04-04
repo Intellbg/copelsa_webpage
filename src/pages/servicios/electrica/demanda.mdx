@@ -5,7 +5,10 @@ layout: "../../../layouts/Layout.astro"
 ---
 import Section from "../../../components/Section.astro";
 import Cover from "../../../components/Cover.astro";
+import Carousel from "../../../components/Carousel.astro";
 import imagen from "../../../images/servicios/electrica/demanda/a1.jpg";
+import imagen2 from "../../../images/servicios/electrica/demanda/a2.png";
+import imagen3 from "../../../images/servicios/electrica/demanda/a3.jpg";
 export const cover = imagen
 
 <Cover title={frontmatter.title}/>
@@ -15,6 +18,11 @@ Determinación del cálculo de demanda para tableros armarios de medidores, medi
 
 
 Análisis técnico económico acorde a la demanda se asesorará y recomendará sobre las instalaciones, protecciones y acometidas
+<ul>
+<li>- Estudios de Flujos de Potencia</li>
+<li>- Estudios de Fallas y Coordinación de Protecciones Eléctricas</li>
+<li>- Estudios de Calidad de Energía Eléctrica</li>
+</ul>
 </p>
-<img src={imagen} slot="right" style='padding:1.5em '/>
+<Carousel images={[imagen,imagen2,imagen3]} slot='right'/>
 </Section>

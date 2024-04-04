@@ -5,10 +5,10 @@ import electrica from "../images/ing-e.jpg";
 import mecanica from "../images/ing-m.jpg";
 import producto from "../images/productos/tableros.png";
 const electrical_server = await Astro.glob(
-  "../pages/servicios/electrica/*.mdx"
+  "../pages/servicios/electrica/*.mdx",
 );
 const mechanical_services = await Astro.glob(
-  "../pages/servicios/mecanica/*.mdx"
+  "../pages/servicios/mecanica/*.mdx",
 );
 ---
 
@@ -22,17 +22,17 @@ const mechanical_services = await Astro.glob(
           es una empresa ecuatoriana de Ingeniería Eléctrica y Mecánica, que se
           dedica al estudio, planificación y construcción de proyectos
           eléctricos de distribución, telefónicos e instalaciones residenciales;
-          además de proyectos mecánicos, como el diseño y construcción de
-          sistemas contraincendios, estructuras de acero, máquinas, control de
-          calidad en soldadura, ensayos no destructivos, entre otros. Cuenta con
+          además de proyectos mecánicos, como el diseño y la construcción de
+          sistema de aire acondicionado, extracción y ventilación mecánica,
+          sistemas contraincendios y sistemas fotovoltaicos. Cuenta con
           profesionales capacitados dentro de las respectivas áreas, que
           permiten una correcta planificación y ejecución de los distintos
           proyectos con la aprobación de estos en entidades municipales como lo
-          es el CAE, Cuerpo de Bomberos de Quito, etc. COPELSA trabaja desde
-          2004 como contratista calificado en la Empresa Eléctrica Quito (EEQ),
-          nuestra razón de ser es el compromiso que tenemos con nuestros
-          clientes para ofrecer soluciones efectivas dentro de la Ingeniería
-          Eléctrica y Mecánica.
+          es el CAE, DESINTECSA, Cuerpo de Bomberos de Quito, etc. COPELSA
+          trabaja desde 2004 como contratista calificado en la Empresa Eléctrica
+          Quito (EEQ), nuestra razón de ser es el compromiso que tenemos con
+          nuestros clientes para ofrecer soluciones efectivas dentro de la
+          Ingeniería Eléctrica y Mecánica.
         </p>
       </div>
     </div>
@@ -54,14 +54,18 @@ const mechanical_services = await Astro.glob(
               }
             </ul>
           </div>
-          <div class="column is-flex is-flex-direction-column is-aling-items-center is-justify-content-center">
+          <div
+            class="column is-flex is-flex-direction-column is-aling-items-center is-justify-content-center"
+          >
             <img src={electrica} alt="" class="index-img" />
           </div>
         </div>
         <div class="columns">
-          <div class="column is-flex is-flex-direction-column is-aling-items-center is-justify-content-center">
+          <div
+            class="column is-flex is-flex-direction-column is-aling-items-center is-justify-content-center"
+          >
             <div class="container">
-              <img src={mecanica} alt="" class="index-img"/>
+              <img src={mecanica} alt="" class="index-img" />
             </div>
           </div>
           <div class="column">
@@ -125,7 +129,7 @@ const mechanical_services = await Astro.glob(
         background-color: #395d41 !important;
         color: white !important;
       }
-      .index-img{
+      .index-img {
         max-height: 300px;
         margin: auto;
       }

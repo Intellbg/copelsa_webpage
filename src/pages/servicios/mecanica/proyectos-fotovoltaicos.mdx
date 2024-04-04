@@ -1,0 +1,24 @@
+---
+title: 'Proyectos Fotovoltaicos'
+url: '/servicios/mecanica/proyectos-fotovoltaicos'
+layout: "../../../layouts/Layout.astro"
+---
+import Section from "../../../components/Section.astro";
+import Cover from "../../../components/Cover.astro";
+import Carousel from "../../../components/Carousel.astro";
+import imagen from "../../../images/servicios/mecanica/fotovoltaico/a1.jpg"
+import imagen2 from "../../../images/servicios/mecanica/fotovoltaico/a2.jpg"
+export const cover = imagen
+
+<Cover title={frontmatter.title}/>
+<Section img={imagen} title='Proyectos Fotovoltaicos'>
+<p slot="left">
+Los proyectos fotovoltaicos representan una alternativa ecoeficiente y sostenible en el ámbito de la ingeniería eléctrica y mecánica, ya que aprovechan una fuente de energía renovable y limpia: la radiación solar. Estos proyectos tienen una importancia significativa en la transición hacia un modelo energético más sostenible y respetuoso con el medio ambiente, al reducir la dependencia de fuentes de energía no renovables y la emisión de gases de efecto invernadero. Los sistemas fotovoltaicos convierten la energía solar en electricidad de manera eficiente y confiable, contribuyendo así a la diversificación de la matriz energética y al fortalecimiento de la seguridad energética. 
+
+<br/>
+•	Estudios de pre – factibilidad, factibilidad y conexión de Sistemas de Generación Distribuida para Autoconsumo al Sistema Nacional Interconectado.
+<br/>
+•	Diseño y Construcción de proyectos Fotovoltaicos bajo normativa aplicable y vigente
+</p>
+<Carousel images={[imagen2,imagen]} slot='right'/>
+</Section>
