@@ -1,9 +1,10 @@
 ---
 export interface Props {
   title: string;
-  img: string;
+  img?: string | { src: string };
 }
 const { title, img } = Astro.props;
+const imageSrc = img && (typeof img === "string" ? img : img.src);
 ---
 
 <div class="section">
@@ -15,7 +16,7 @@ const { title, img } = Astro.props;
         <div class="container">
           <slot name="left" />
         </div>
-        <img src={img} slot="right" style="padding:1.5em" />
+        {imageSrc && <img src={imageSrc} style="padding:1.5em" />}
       </div>
 
       <div

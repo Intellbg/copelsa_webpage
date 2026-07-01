@@ -1,9 +1,11 @@
 ---
 export interface Props {
-  images: string[];
+  images: Array<string | { src: string }>;
   carrouselID?: string;
 }
 const { images, carrouselID = "0" } = Astro.props;
+const imageSrc = (image: string | { src: string }) =>
+  typeof image === "string" ? image : image.src;
 ---
 
 <div class="carousel" id={carrouselID}>
@@ -11,7 +13,7 @@ const { images, carrouselID = "0" } = Astro.props;
     {
       images.map((data) => (
         <div class="slide">
-          <img src={data} alt={data} />
+          <img src={imageSrc(data)} alt="" />
         </div>
       ))
     }

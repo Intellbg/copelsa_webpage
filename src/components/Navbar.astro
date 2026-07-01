@@ -1,7 +1,11 @@
 ---
 import logo from "../images/logo.png";
-const electrical_services = await Astro.glob("../pages/servicios/electrica/*.mdx")
-const mechanical_services = await Astro.glob("../pages/servicios/mecanica/*.mdx")
+const electrical_services = Object.values(
+  import.meta.glob("../pages/servicios/electrica/*.mdx", { eager: true }),
+);
+const mechanical_services = Object.values(
+  import.meta.glob("../pages/servicios/mecanica/*.mdx", { eager: true }),
+);
 
 ---
 
@@ -9,8 +13,9 @@ const mechanical_services = await Astro.glob("../pages/servicios/mecanica/*.mdx"
   <div class="navbar-brand">
     <a href="/" style="padding:0%">
       <img
-        src={logo}
+        src={logo.src}
         style="height: 60px!important; padding-left: 1em; display:block"
+        alt="COPELSA"
       />
     </a>
     <a

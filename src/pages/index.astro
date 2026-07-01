@@ -4,11 +4,11 @@ import ParalaxTitle from "../components/ParalaxTitle.astro";
 import electrica from "../images/ing-e.jpg";
 import mecanica from "../images/ing-m.jpg";
 import producto from "../images/productos/tableros.png";
-const electrical_server = await Astro.glob(
-  "../pages/servicios/electrica/*.mdx",
+const electrical_server = Object.values(
+  import.meta.glob("../pages/servicios/electrica/*.mdx", { eager: true }),
 );
-const mechanical_services = await Astro.glob(
-  "../pages/servicios/mecanica/*.mdx",
+const mechanical_services = Object.values(
+  import.meta.glob("../pages/servicios/mecanica/*.mdx", { eager: true }),
 );
 ---
 
@@ -57,7 +57,7 @@ const mechanical_services = await Astro.glob(
           <div
             class="column is-flex is-flex-direction-column is-aling-items-center is-justify-content-center"
           >
-            <img src={electrica} alt="" class="index-img" />
+            <img src={electrica.src} alt="" class="index-img" />
           </div>
         </div>
         <div class="columns">
@@ -65,7 +65,7 @@ const mechanical_services = await Astro.glob(
             class="column is-flex is-flex-direction-column is-aling-items-center is-justify-content-center"
           >
             <div class="container">
-              <img src={mecanica} alt="" class="index-img" />
+              <img src={mecanica.src} alt="" class="index-img" />
             </div>
           </div>
           <div class="column">
@@ -94,7 +94,7 @@ const mechanical_services = await Astro.glob(
       <div class="container has-text-centered">
         <div class="columns">
           <div class="column is-one-quarter">
-            <img src={producto} alt="" id="producto" />
+            <img src={producto.src} alt="" id="producto" />
           </div>
           <div
             class="column is-three-quarters is-flex is-align-items-center is-flex-direction-column is-justify-content-center"

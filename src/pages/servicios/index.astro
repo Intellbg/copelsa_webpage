@@ -1,7 +1,11 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-const electrical_server = await Astro.glob("./electrica/*.mdx");
-const mechanical_services = await Astro.glob("./mecanica/*.mdx");
+const electrical_server = Object.values(
+  import.meta.glob("./electrica/*.mdx", { eager: true }),
+);
+const mechanical_services = Object.values(
+  import.meta.glob("./mecanica/*.mdx", { eager: true }),
+);
 ---
 
 <Layout title="Servicios">
@@ -17,7 +21,7 @@ const mechanical_services = await Astro.glob("./mecanica/*.mdx");
                   <div class="card">
                     <div class="card-image">
                       <figure class="image is-4by3">
-                        <img src={data.cover} alt={data.title} />
+                        <img src={data.cover.src} alt={data.frontmatter.title} />
                       </figure>
                     </div>
                     <div class="card-content">
@@ -44,7 +48,7 @@ const mechanical_services = await Astro.glob("./mecanica/*.mdx");
                   <div class="card">
                     <div class="card-image">
                       <figure class="image is-4by3">
-                        <img src={data.cover} alt={data.title} />
+                        <img src={data.cover.src} alt={data.frontmatter.title} />
                       </figure>
                     </div>
                     <div class="card-content">
